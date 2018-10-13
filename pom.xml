@@ -264,34 +264,46 @@
       <repositories>
         <repository>
           <snapshots>
-            <enabled>true</enabled>
+            <enabled>false</enabled>
           </snapshots>
-          <id>ceair-proxy</id>
-          <name>Public Repositories</name>
-          <url>http://10.67.200.48:8081/repository/maven-public/</url>
+          <id>jforg-release</id>
+          <name>libs-release</name>
+          <url>http://192.168.56.134:8081/artifactory/libs-release</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>jforg-snapshots</id>
+          <name>libs-snapshot</name>
+          <url>http://192.168.56.134:8081/artifactory/libs-snapshot</url>
         </repository>
       </repositories>
       <pluginRepositories>
         <pluginRepository>
           <snapshots>
-            <enabled>true</enabled>
+            <enabled>false</enabled>
           </snapshots>
-          <id>ceair-plugin-proxy</id>
-          <name>Public Repositories</name>
-          <url>http://10.67.200.48:8081/repository/maven-public/</url>
+          <id>jforg-release</id>
+          <name>libs-release</name>
+          <url>http://192.168.56.134:8081/artifactory/libs-release</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>jforg-snapshots</id>
+          <name>libs-snapshot</name>
+          <url>http://192.168.56.134:8081/artifactory/libs-snapshot</url>
         </pluginRepository>
       </pluginRepositories>
       <!-- 项目部署到私服配置 -->
       <distributionManagement> <!-- 远程部署管理信息 -->
-        <repository> <!--部署项目产生的构件到远程仓库需要的信息 -->
-          <id>ceair-release</id>
-          <name>Nexus Release Repository</name>
-          <url>http://10.67.200.48:8081/repository/maven-releases/</url>
+        <repository>
+          <id>jforg-release</id>
+          <name>devops-releases</name>
+          <url>http://192.168.56.134:8081/artifactory/libs-release</url>
         </repository>
         <snapshotRepository> <!-- 如果没有配置该元素，默认部署到repository元素配置的仓库 -->
-          <id>ceair-snapshots</id>
-          <name>Nexus Snapshot Repository</name>
-          <url>http://10.67.200.48:8081/repository/maven-snapshots/</url>
+          <id>jforg-snapshots</id>
+          <name>devops-snapshots</name>
+          <url>http://192.168.56.134:8081/artifactory/libs-snapshot</url>
         </snapshotRepository>
       </distributionManagement>
     </profile>
