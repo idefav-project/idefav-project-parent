@@ -259,7 +259,7 @@
 
   <profiles>
     <profile>
-      <id>ceair-profile</id>
+      <id>idefav-profile</id>
       <!--从私服拉取代码配置-->
       <repositories>
         <repository>
