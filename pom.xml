@@ -9,6 +9,33 @@
   <version>${revision}</version>
   <packaging>pom</packaging>
 
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>idefav</name>
+      <email>wzs2009_hi@126.com</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <tag>master</tag>
+    <url>https://github.com/idefav-project/idefav-project-parent.git</url>
+    <connection>scm:git:https://github.com/idefav-project/idefav-project-parent.git</connection>
+    <developerConnection>scm:git:https://github.com/idefav-project/idefav-project-parent.git</developerConnection>
+  </scm>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
   <properties>
     <!--CI ompatible-->
     <revision>1.1.1</revision>
@@ -256,58 +283,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <profiles>
-    <profile>
-      <id>idefav-profile</id>
-      <!--从私服拉取代码配置-->
-      <repositories>
-        <repository>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <id>jforg-release</id>
-          <name>libs-release</name>
-          <url>http://192.168.56.134:8081/artifactory/libs-release</url>
-        </repository>
-        <repository>
-          <snapshots />
-          <id>jforg-snapshots</id>
-          <name>libs-snapshot</name>
-          <url>http://192.168.56.134:8081/artifactory/libs-snapshot</url>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <id>jforg-release</id>
-          <name>libs-release</name>
-          <url>http://192.168.56.134:8081/artifactory/libs-release</url>
-        </pluginRepository>
-        <pluginRepository>
-          <snapshots />
-          <id>jforg-snapshots</id>
-          <name>libs-snapshot</name>
-          <url>http://192.168.56.134:8081/artifactory/libs-snapshot</url>
-        </pluginRepository>
-      </pluginRepositories>
-      <!-- 项目部署到私服配置 -->
-      <distributionManagement> <!-- 远程部署管理信息 -->
-        <repository>
-          <id>jforg-release</id>
-          <name>devops-releases</name>
-          <url>http://192.168.56.134:8081/artifactory/libs-release</url>
-        </repository>
-        <snapshotRepository> <!-- 如果没有配置该元素，默认部署到repository元素配置的仓库 -->
-          <id>jforg-snapshots</id>
-          <name>devops-snapshots</name>
-          <url>http://192.168.56.134:8081/artifactory/libs-snapshot</url>
-        </snapshotRepository>
-      </distributionManagement>
-    </profile>
-  </profiles>
 
   <build>
     <resources>
