@@ -48,7 +48,7 @@
     <joda-time.version>2.10.6</joda-time.version>
     <mysql-connector-java.version>5.1.49</mysql-connector-java.version>
     <mssql-jdbc.version>6.2.1.jre8</mssql-jdbc.version>
-    <mybatis.version>3.5.5</mybatis.version>
+    <mybatis.version>3.5.6</mybatis.version>
     <mybatis-spring.version>2.0.5</mybatis-spring.version>
     <junit.version>4.12</junit.version>
     <netty-all.version>4.1.50.Final</netty-all.version>
